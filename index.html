@@ -3,9 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>medicine-detector</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+      <div class="main-container" id="app">
+        <form id="img-upload-form" class="image-uploader-container">
+            <input onchange="uploadImage()" name="img-upload" id="img-upload" class="image-uploader"  type="file" accept="image/*" capture="environment">
+            <label class="image-button-label" for="img-upload">TAKE A PICTURE OF A MEDICINE</label>
+            <img id="img-preview" class="image-preview" src="#" />
+        </form>
+      </div>
+
+      <script src="image-input.js"></script>
   </body>
 </html>

@@ -1,0 +1,36 @@
+.main-container {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+} 
+
+.image-uploader-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-uploader {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.image-uploader + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.image-uploader:focus + label,
+.image-uploader + label:hover {
+    background-color: red;
+}
+
+.image-preview,
+.image-button-label {
+    width: fit-content;
+    align-self: center;
+}
