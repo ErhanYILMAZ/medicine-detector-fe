@@ -1,13 +1,13 @@
 function uploadImage() {
     const output = document.getElementById('img-preview');
-    const uploadButton = document.getElementById('img-upload');
+    const $uploadButton = $('.image-button-label');
     const pic = document.getElementById('img-upload').files[0];
     const reader = new FileReader();
     reader.onloadend = function () { 
         output.src  = reader.result;
     } 
     if (pic) { 
-        uploadButton.style.display = 'none';
+        $uploadButton.hide()
         reader.readAsDataURL(pic);
     } else { 
         output.src = "#";
